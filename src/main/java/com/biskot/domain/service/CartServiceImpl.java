@@ -1,8 +1,14 @@
 package com.biskot.domain.service;
 
 import com.biskot.domain.model.Cart;
+import com.biskot.domain.spi.CartPersistencePort;
+import lombok.RequiredArgsConstructor;
 
+@RequiredArgsConstructor
 public class CartServiceImpl implements CartService {
+
+    private CartPersistencePort cartPersistencePort;
+
     @Override
     public void createCart() {
         // TODO: to be implemented
